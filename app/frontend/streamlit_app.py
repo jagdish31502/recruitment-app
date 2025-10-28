@@ -280,9 +280,6 @@ def main():
         else:
             candidates = st.session_state['matching_results']['results']
             
-            # Add info about personalization
-            st.info("🎯 **New Feature:** Emails are now personalized with specific resume matching insights, including matching skills, experience, and detailed analysis!")
-            
             col1, col2 = st.columns([1, 1])
             
             with col1:
@@ -297,7 +294,7 @@ def main():
                     company_name_email = st.text_input("Company Name", value="Tech Corp")
                     manager_name = st.text_input("Hiring Manager Name", value="Sarah Johnson")
                     
-                    if st.button("🎉 Generate Personalized Interview Email", type="primary"):
+                    if st.button("Generate Personalized Interview Email", type="primary"):
                         generate_and_show_email(    
                             best_candidate,
                             candidate_name,
@@ -317,7 +314,7 @@ def main():
                 )
                 
                 if selected_candidate_idx > 0:  # Skip the best match
-                    st.subheader("📝 Personalized Rejection Email (Other Candidates)")
+                    st.subheader("Personalized Rejection Email (Other Candidates)")
                     candidate = candidates[selected_candidate_idx]
                     
                     st.info(f"**Selected Candidate:** {candidate['filename']} (Score: {candidate['score']}%)")
@@ -327,7 +324,7 @@ def main():
                     company_name_email = st.text_input("Company Name", value="Tech Corp", key="rejection_company")
                     manager_name = st.text_input("Hiring Manager Name", value="Sarah Johnson", key="rejection_manager")
                     
-                    if st.button("📝 Generate Personalized Rejection Email", type="primary"):
+                    if st.button("Generate Personalized Rejection Email", type="primary"):
                         generate_and_show_email(
                             candidate,
                             candidate_name,
