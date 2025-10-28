@@ -48,6 +48,7 @@ recruitment-app/
 │   ├── services/           # Business logic
 │   └── utilities/          # Helper functions
 ├── logs/                   # Application logs
+├── assets/
 └── requirements.txt        # Dependencies
 ```
 
@@ -57,6 +58,8 @@ recruitment-app/
 - Python 3.8+
 - MongoDB (local or cloud)
 - AI Provider API keys (optional)
+
+**📋 For detailed setup instructions, see [setup.md](setup.md)**
 
 ### Installation
 

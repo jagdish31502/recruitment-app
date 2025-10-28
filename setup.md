@@ -32,6 +32,7 @@ Expected structure:
 ```
 recruitment-app/
 ├── app/
+├── assets/
 ├── requirements.txt
 ├── README.md
 └── setup.md
