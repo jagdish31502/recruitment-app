@@ -23,7 +23,7 @@ Before starting, ensure you have:
 
 ```bash
 # Clone the repository
-git clone <your-repository-url>
+git clone https://github.com/jagdish31502/recruitment-app.git
 cd recruitment-app
 
 ```
@@ -141,6 +141,32 @@ https://ollama.com/download
 ollama run llama3.1
 ```
 Note: It may take some time to get a response when using local models
+
+## 🎯 Enhanced Email Generation Setup
+
+### **New Features Available**
+
+The application now includes advanced email generation capabilities:
+
+#### **Personalized Email Generation**
+- **Resume Matching Integration**: Emails automatically include detailed resume analysis
+- **Skill-Specific Content**: Mentions specific skills, experience, and qualifications
+- **Professional Templates**: AI-generated content with proper formatting
+- **Multi-Provider Support**: Works with all supported AI providers
+
+#### **Email Types**
+1. **Interview Emails**: Personalized invitations with specific skill mentions
+2. **Rejection Emails**: Respectful rejections with constructive feedback
+
+#### **Setup Requirements**
+- **Resume Matching**: Complete resume matching first to enable personalized emails
+- **AI Provider**: Any supported AI provider (OpenAI, Gemini, Groq, Ollama)
+
+#### **Usage Workflow**
+1. Upload job description
+2. Upload and match resumes
+3. Generate personalized emails with matching insights
+4. View detailed analysis used for personalization
 
 ### Running Commands
 

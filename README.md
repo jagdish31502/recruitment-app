@@ -17,10 +17,13 @@ A comprehensive AI-powered recruitment system that automates candidate evaluatio
 - **Scoring System**: Percentage-based matching scores
 - **Batch Processing**: Handle up to 10 resumes simultaneously
 
-### 📧 Email Generation
-- **Interview Emails**: Generate personalized interview invitations
-- **Rejection Emails**: Create professional rejection communications
-- **AI-Generated Content**: Context-aware email generation
+### 📧 Enhanced Email Generation
+- **🎯 Personalized Interview Emails**: Generate highly personalized interview invitations with specific skill mentions
+- **📝 Intelligent Rejection Emails**: Create respectful rejection emails with constructive feedback
+- **🔍 Resume Matching Integration**: Emails include detailed resume analysis and matching insights
+- **📊 Candidate-Specific Content**: Mentions specific skills, experience, education, and strengths
+- **🎨 Professional Templates**: AI-generated content with proper formatting and tone
+- **📈 Matching Score Integration**: Emails reference candidate scores and analysis breakdown
 
 ### 🗄️ Database Management
 - **MongoDB Integration**: Complete data persistence
@@ -59,7 +62,7 @@ recruitment-app/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/jagdish31502/recruitment-app.git
    cd recruitment-app
    ```
 
@@ -176,12 +179,36 @@ MONGODB_DATABASE=recruitment_app
 - `POST /api/v1/resume-matching/match` - Match resumes against job description
 
 ### Email Generation
-- `POST /api/v1/email/generate` - Generate interview/rejection emails
+- `POST /api/v1/email/generate` - Generate personalized emails with resume matching data
+- `POST /api/v1/email/generate-with-matching` - Enhanced endpoint with detailed matching analysis
 
 ### Database
 - `GET /api/v1/database/summary` - Get all data summary
 - `GET /api/v1/database/job-descriptions` - List all job descriptions
 - `GET /api/v1/database/candidates` - List all candidates
+
+## 🎯 Enhanced Email Generation Features
+
+### **Personalized Email Generation**
+The system now generates highly personalized emails by integrating resume matching analysis:
+
+#### **Interview Emails Include:**
+- ✅ **Specific Skill Mentions**: "Your expertise in Python, Django, and AWS..."
+- 📈 **Experience Highlights**: "With your 5 years of backend development experience..."
+- 🎓 **Education References**: "Your Computer Science background from..."
+- 🌟 **Strength Recognition**: "Your problem-solving and leadership skills..."
+- 📝 **Detailed Analysis**: References to the matching score breakdown
+
+#### **Rejection Emails Include:**
+- ✅ **Acknowledgment of Strengths**: "Your strong Python skills and cloud experience..."
+- ⚠️ **Constructive Feedback**: "Areas for growth include Kubernetes and ML frameworks..."
+- 📊 **Professional Tone**: Respectful and encouraging language
+- 🚀 **Future Opportunities**: Encourages future applications
+
+#### **Technical Implementation:**
+- **Single LLM Call**: Optimized to generate both content and structured output in one call
+- **Resume Data Integration**: Automatically includes extracted resume information
+- **Multi-Provider Support**: Works with OpenAI, Gemini, Groq, and Ollama
 
 ## 🧠 AI Model Choice & Logic
 
